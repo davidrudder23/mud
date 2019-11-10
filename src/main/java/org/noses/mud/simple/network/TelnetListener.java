@@ -10,6 +10,11 @@ import org.noses.mud.simple.session.SessionRegistry;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Eventually, I'd like to have multiple different ways to connect. "telnet hostname 2323" was the way we used to do it, back
+ * in the day.  I'd like to add ssh pretty quickly.  If this thing gets popular, a json representation would be nice, so we
+ * can make cell phone or web frontends.
+ */
 @Slf4j
 public class TelnetListener implements Runnable {
 
@@ -42,6 +47,9 @@ public class TelnetListener implements Runnable {
 
                 IOHandler ioHandler = new IOHandler(session, socket.getInputStream(), socket.getOutputStream());
                 ioHandler.sendMessage(room.getDisplay("text/plain"));
+
+                // This is just plain old Java threads.  There's probably a much more efficient way to do
+                // this, but it's nice to have something so simple
 
                 new Thread(ioHandler).start();
             } catch (Exception exc) {
