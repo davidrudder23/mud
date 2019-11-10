@@ -5,6 +5,7 @@ import org.noses.mud.simple.input.IOHandler;
 import org.noses.mud.simple.room.Room;
 import org.noses.mud.simple.room.RoomLoader;
 import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.session.SessionRegistry;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -37,9 +38,12 @@ public class TelnetListener implements Runnable {
                 Session session = new Session();
                 Room room = RoomLoader.getInstance().getDefaultRoom();
                 session.setRoom(room);
+                SessionRegistry.getInstance().register(session);
+
                 IOHandler ioHandler = new IOHandler(session, socket.getInputStream(), socket.getOutputStream());
                 ioHandler.sendMessage(room.getDisplay("text/plain"));
-                ioHandler.run();
+
+                new Thread(ioHandler).start();
             } catch (Exception exc) {
                 log.warn("Got an exception listing for a socket", exc);
             }

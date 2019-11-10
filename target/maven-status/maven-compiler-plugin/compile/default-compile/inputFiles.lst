@@ -1,6 +1,7 @@
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/CommandTable.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/GoCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/QuitCommand.java
+/home/drig/workspace/mud/src/main/java/org/noses/mud/simple/session/SessionRegistry.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/service/HelloWorldService.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/room/Room.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/network/TelnetListener.java

@@ -1,3 +1,4 @@
+org/noses/mud/simple/session/SessionRegistry.class
 org/noses/mud/simple/room/RoomLoader.class
 org/noses/mud/simple/session/Session.class
 org/noses/mud/simple/network/TelnetListener.class

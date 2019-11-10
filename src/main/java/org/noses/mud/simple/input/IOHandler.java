@@ -7,7 +7,7 @@ import org.noses.mud.simple.session.Session;
 import java.io.*;
 
 @Slf4j
-public class IOHandler {
+public class IOHandler implements Runnable {
     BufferedReader in;
     PrintWriter out;
     Session session;
@@ -18,11 +18,16 @@ public class IOHandler {
         this.out = new PrintWriter(new OutputStreamWriter(out));
     }
 
-    public void run() throws IOException {
-        while (true) {
-            String line = in.readLine();
-            CommandTable.getInstance().handleLine(this, session, line);
-            out.println(session.getRoom().getDisplay("text/plain"));
+    @Override
+    public void run() {
+        try {
+            while (true) {
+                String line = in.readLine();
+                CommandTable.getInstance().handleLine(this, session, line);
+                out.println(session.getRoom().getDisplay("text/plain"));
+            }
+        } catch (IOException ioExc) {
+            log.warn("Session dropped", ioExc);
         }
     }
 

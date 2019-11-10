@@ -1,8 +1,11 @@
 package org.noses.mud.simple.room;
 
 import lombok.Data;
+import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.session.SessionRegistry;
 
 import java.util.HashMap;
+import java.util.List;
 
 @Data
 public class Room {
@@ -23,6 +26,14 @@ public class Room {
             display.append("\n");
             display.append(description);
             display.append("\n");
+            display.append("\n");
+
+            display.append("People in this room: \n");
+            for (Session session: getSessionsInRoom()) {
+                display.append("  ");
+                display.append(session.getName());
+                display.append("\n");
+            }
             display.append("\n");
 
             display.append("Rooms: ");
@@ -51,5 +62,9 @@ public class Room {
         }
 
         return RoomLoader.getInstance().getRoomByIdentifier(roomId);
+    }
+
+    public List<Session> getSessionsInRoom() {
+        return SessionRegistry.getInstance().getByRoom(this);
     }
 }
