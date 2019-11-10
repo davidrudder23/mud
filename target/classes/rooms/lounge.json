@@ -1,0 +1,11 @@
+{
+  "identifier": "main-lounge",
+  "shortName": "Main Lounge",
+  "longName": "The Main Lounge - a central gathering place and the place where all new logins join",
+  "description": "This is the main lounge, a place where people come to gather. If you are a new player, you will be placed here to begin.  All fighting is strictly prohibited.",
+  "default": true,
+  "exits": {
+    "out": "lounge-doorstep"
+  }
+}
+

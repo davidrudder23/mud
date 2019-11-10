@@ -1,0 +1,10 @@
+{
+  "identifier": "lounge-doorstep",
+  "shortName": "Lounge Doorstep",
+  "longName": "Right outside the lounge, looking out over the valley",
+  "description": "You face out from the lounge, looking over the valley.  You can see mist covered forests in the distance.  The hubbub of the lounge is a steady, low din behind you.",
+  "exits": {
+    "lounge": "main-lounge"
+  }
+}
+
