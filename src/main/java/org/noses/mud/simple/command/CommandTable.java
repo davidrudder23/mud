@@ -18,6 +18,8 @@ public class CommandTable {
         commands = new ArrayList<Command>();
         commands.add(new GoCommand());
         commands.add(new QuitCommand());
+        commands.add(new SayCommand());
+        commands.add(new WhisperCommand());
     }
 
     public static CommandTable getInstance() {
@@ -37,6 +39,7 @@ public class CommandTable {
             }
         }
 
+        ioHandler.sendMessage("I'm sorry, I don't understand \""+line+"\"");
         log.info("Could not handle line {}", line);
     }
 }

@@ -2,8 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0efc58f-6644-440d-9e0c-d630311a4e6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/SayCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/WhisperCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/npc/DialogListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/npc/NPC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/npc/TextDialogListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/npc/TextDialogNPCLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/text_dialog_handlers/first_quest_bit.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/text_dialog_handlers/welcome_bot.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/CommandTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/CommandTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/input/IOHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/input/IOHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/network/TelnetListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/network/TelnetListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/session/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms/lounge.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms/lounge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/CommandTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/CommandTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/input/IOHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/input/IOHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/network/TelnetListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/network/TelnetListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/room/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/room/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/session/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/session/Session.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rooms/lounge.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rooms/lounge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SampleSimpleApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SampleSimpleApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SampleSimpleApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SampleSimpleApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -33,12 +61,20 @@
     </option>
   </component>
   <component name="ProjectId" id="1TQiOirk639Jx27adlWU8edQhKX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="show.unlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.noses.mud.simple.command" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -117,13 +153,21 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/CommandTable.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/noses/mud/simple/npc/TextDialogListener.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/WhisperCommand.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

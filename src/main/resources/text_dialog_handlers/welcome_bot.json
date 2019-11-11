@@ -1,0 +1,15 @@
+{
+  "identifier": "welcome-bot",
+  "shortName": "Welcome Bot",
+  "longName": "A helpful android who can answer all of your questions.",
+  "description": "The welcome bot looks more like a department store kiosk than a real player.  Built more for utility than aesthetics, Welcome Bot is here to serve you.",
+  "talk": {
+    "hello": "Hello, I am the welcome bot.  Please type \"whisper to welcome bot help\" for more help",
+    "whazzup": "Whaaazzzuuuuppp"
+  },
+  "whisper": {
+    "help": "This is boilerplate code for the help system",
+    "I'm bored": "Try going outside and running around"
+  }
+}
+

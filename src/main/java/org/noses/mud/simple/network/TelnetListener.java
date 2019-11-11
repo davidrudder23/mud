@@ -46,6 +46,7 @@ public class TelnetListener implements Runnable {
                 SessionRegistry.getInstance().register(session);
 
                 IOHandler ioHandler = new IOHandler(session, socket.getInputStream(), socket.getOutputStream());
+                session.setIoHandler(ioHandler);
                 ioHandler.sendMessage(room.getDisplay("text/plain"));
 
                 // This is just plain old Java threads.  There's probably a much more efficient way to do

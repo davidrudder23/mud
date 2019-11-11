@@ -1,13 +1,20 @@
 package org.noses.mud.simple.room;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+import org.noses.mud.simple.npc.NPC;
+import org.noses.mud.simple.npc.TextDialogNPCLoader;
 import org.noses.mud.simple.session.Session;
 import org.noses.mud.simple.session.SessionRegistry;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Data
+@Slf4j
 public class Room {
 
     private String identifier;
@@ -17,7 +24,20 @@ public class Room {
 
     private boolean isDefault = false;
 
-    private HashMap<String, String> exits;
+    private Map<String, String> exits;
+
+    private List<NPC> npcs = new ArrayList<NPC>();
+
+    @JsonProperty("npcs")
+    public void setNPCs(Map<String, String> npcNameAndTypes) {
+        log.info("Set NPCs called");
+        for (String key: npcNameAndTypes.keySet()) {
+            NPC npc = TextDialogNPCLoader.getInstance().getNPCByIdentifier(npcNameAndTypes.get(key));
+            npcs.add(npc);
+            log.info("{} is {}", key, npc);
+        }
+
+    }
 
     public String getDisplay(String dataType) {
         if (dataType.equalsIgnoreCase("text/plain")) {
@@ -33,6 +53,15 @@ public class Room {
                 display.append("  ");
                 display.append(session.getName());
                 display.append("\n");
+            }
+            display.append("\n");
+
+            display.append("NPCs in this room: \n");
+            for (NPC npc: getNpcs()) {
+                display.append("  ");
+                display.append(npc.getShortName());
+                display.append("\n");
+
             }
             display.append("\n");
 

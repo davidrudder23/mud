@@ -6,6 +6,9 @@
   "default": true,
   "exits": {
     "out": "lounge-doorstep"
+  },
+  "npcs": {
+    "Welcome Bot": "welcome-bot"
   }
 }
 

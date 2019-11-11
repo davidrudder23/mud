@@ -31,6 +31,14 @@ public class IOHandler implements Runnable {
         }
     }
 
+    public void sendMessage(Session speaker, String message) {
+        if (speaker == null) {
+            sendMessage(message);
+        } else {
+            sendMessage(speaker.getName()+": "+message);
+        }
+    }
+
     public void sendMessage(String message) {
         log.info (message);
         out.println(message);
