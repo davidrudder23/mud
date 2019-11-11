@@ -28,7 +28,6 @@ public class SayCommand extends Command {
         for (NPC npc: room.getNpcs()) {
             npc.handleDialog(session, line.trim());
             countPeople++;
-
         }
 
         session.getIoHandler().sendMessage("You said \""+line+"\" "+countPeople+" times");

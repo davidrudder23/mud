@@ -14,5 +14,6 @@
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/npc/NPC.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/input/IOHandler.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/room/RoomLoader.java
+/home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/LookCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/SayCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/session/Session.java

@@ -5,10 +5,11 @@
   "description": "The welcome bot looks more like a department store kiosk than a real player.  Built more for utility than aesthetics, Welcome Bot is here to serve you.",
   "talk": {
     "hello": "Hello, I am the welcome bot.  Please type \"whisper to welcome bot help\" for more help",
+    "help": "I am the Welcome Bot and I am here to help. First, let's talk in a whisper, so we don't disturb other people.  Please type \"whisper to welcome bot help\" for more help",
     "whazzup": "Whaaazzzuuuuppp"
   },
   "whisper": {
-    "help": "This is boilerplate code for the help system",
+    "help": "The MUD is just beginning.  Please be patient as we implement basic features.\n\n  For now, you can type in \"go <direction>\" to go in a particular direction.\n\nOr type in \"say <phrase>\" to say something.",
     "I'm bored": "Try going outside and running around"
   }
 }

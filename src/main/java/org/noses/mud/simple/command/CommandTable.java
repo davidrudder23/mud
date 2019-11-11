@@ -16,8 +16,9 @@ public class CommandTable {
 
     public CommandTable() {
         commands = new ArrayList<Command>();
-        commands.add(new GoCommand());
+        commands.add(new LookCommand());
         commands.add(new QuitCommand());
+        commands.add(new GoCommand());
         commands.add(new SayCommand());
         commands.add(new WhisperCommand());
     }
