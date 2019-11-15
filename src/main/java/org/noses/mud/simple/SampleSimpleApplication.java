@@ -16,6 +16,7 @@
 
 package org.noses.mud.simple;
 
+import org.noses.mud.simple.network.SSHListener;
 import org.noses.mud.simple.network.TelnetListener;
 import org.noses.mud.simple.room.RoomLoader;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,9 @@ public class SampleSimpleApplication implements CommandLineRunner {
 		System.out.println("Running");
 		TelnetListener telnetListener = new TelnetListener(2323);
 		new Thread(telnetListener).start();
+
+		SSHListener sshListener = new SSHListener(2222);
+		new Thread(sshListener).start();
 
 		SpringApplication.run(SampleSimpleApplication.class, args);
 	}

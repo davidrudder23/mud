@@ -42,6 +42,7 @@ public class IOHandler implements Runnable {
     public void sendMessage(String message) {
         log.info (message);
         out.println(message);
+        out.println("\r\n");
         out.flush();
     }
 
