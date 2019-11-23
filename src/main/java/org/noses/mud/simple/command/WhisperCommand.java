@@ -7,7 +7,7 @@ import org.noses.mud.simple.session.Session;
 
 public class WhisperCommand extends Command {
     public WhisperCommand() {
-        name = "whisper";
+        names.add("whisper");
     }
 
     @Override

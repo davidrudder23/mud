@@ -11,7 +11,8 @@ import java.io.IOException;
 public class QuitCommand extends Command {
 
     public QuitCommand() {
-        name = "quit";
+        names.add("quit");
+        names.add("exit");
     }
 
     @Override

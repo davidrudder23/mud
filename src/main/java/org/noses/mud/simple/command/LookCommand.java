@@ -6,7 +6,8 @@ import org.noses.mud.simple.session.Session;
 public class LookCommand extends Command {
 
     public LookCommand() {
-        name = "look";
+        names.add("look");
+        names.add("see");
     }
 
     @Override

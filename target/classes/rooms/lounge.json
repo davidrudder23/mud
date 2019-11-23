@@ -7,6 +7,15 @@
   "exits": {
     "out": "lounge-doorstep"
   },
+  "items": [
+    {
+      "names": [
+        "pipe",
+        "wand"
+      ],
+      "description": "A basic starter wand"
+    }
+  ],
   "npcs": {
     "Welcome Bot": "welcome-bot"
   }

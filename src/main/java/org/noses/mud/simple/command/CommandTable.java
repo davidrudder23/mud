@@ -21,6 +21,7 @@ public class CommandTable {
         commands.add(new GoCommand());
         commands.add(new SayCommand());
         commands.add(new WhisperCommand());
+        commands.add(new PickUpCommand());
     }
 
     public static CommandTable getInstance() {
@@ -32,8 +33,9 @@ public class CommandTable {
 
     public void handleLine(IOHandler ioHandler, Session session, String line) {
         for (Command command: commands) {
-            if (line.toLowerCase().startsWith(command.getName().toLowerCase())) {
-                String stripped = line.substring(command.getName().length(), line.length()).trim();
+            String matchedCommandName = command.nameMatches(line);
+            if (matchedCommandName != null) {
+                String stripped = line.substring(matchedCommandName.length(), line.length()).trim();
                 log.info("Handling command {} with line {}", command.toString(), stripped);
                 command.handleCommandString(session, ioHandler, stripped);
                 return;

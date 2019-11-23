@@ -7,7 +7,7 @@ import org.noses.mud.simple.session.Session;
 
 public class SayCommand extends Command {
     public SayCommand() {
-        name = "say";
+        names.add("say");
     }
 
     @Override

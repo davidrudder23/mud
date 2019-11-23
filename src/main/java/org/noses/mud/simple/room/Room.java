@@ -3,8 +3,10 @@ package org.noses.mud.simple.room;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.noses.mud.simple.Item;
 import org.noses.mud.simple.npc.NPC;
 import org.noses.mud.simple.npc.TextDialogNPCLoader;
+import org.noses.mud.simple.output.ColorCodes;
 import org.noses.mud.simple.session.Session;
 import org.noses.mud.simple.session.SessionRegistry;
 
@@ -28,6 +30,8 @@ public class Room {
 
     private List<NPC> npcs = new ArrayList<NPC>();
 
+    private List<Item> items = new ArrayList<Item>();
+
     @JsonProperty("npcs")
     public void setNPCs(Map<String, String> npcNameAndTypes) {
         log.info("Set NPCs called");
@@ -42,13 +46,17 @@ public class Room {
     public String getDisplay(String dataType) {
         if (dataType.equalsIgnoreCase("text/plain")) {
             StringBuffer display = new StringBuffer();
+            display.append(ColorCodes.color("white"));
             display.append(longName);
             display.append("\n");
+            display.append(ColorCodes.color("light_grey"));
             display.append(description);
             display.append("\n");
             display.append("\n");
 
+            display.append(ColorCodes.color("white"));
             display.append("People in this room: \n");
+            display.append(ColorCodes.color("light_grey"));
             for (Session session: getSessionsInRoom()) {
                 display.append("  ");
                 display.append(session.getName());
@@ -56,7 +64,9 @@ public class Room {
             }
             display.append("\n");
 
+            display.append(ColorCodes.color("white"));
             display.append("NPCs in this room: \n");
+            display.append(ColorCodes.color("light_grey"));
             for (NPC npc: getNpcs()) {
                 display.append("  ");
                 display.append(npc.getShortName());
@@ -65,7 +75,19 @@ public class Room {
             }
             display.append("\n");
 
-            display.append("Rooms: ");
+            display.append(ColorCodes.color("white"));
+            display.append("Items available to pick up:\n");
+            display.append(ColorCodes.color("light_grey"));
+            for (Item item: getItems()) {
+                display.append("  ");
+                display.append(item.getName());
+                display.append("\n");
+            }
+            display.append("\n");
+
+            display.append(ColorCodes.color("white"));
+            display.append("Exits: ");
+            display.append(ColorCodes.color("light_grey"));
             display.append("\n");
             for (String exitDirection: exits.keySet()) {
                 String roomId = exits.get(exitDirection);

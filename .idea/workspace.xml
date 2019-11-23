@@ -2,18 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0efc58f-6644-440d-9e0c-d630311a4e6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/LookCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/PickUpCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/output/ColorCodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mud.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/CommandTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/CommandTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/GoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/GoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/LookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/LookCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/QuitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/QuitCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/SayCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/SayCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/text_dialog_handlers/welcome_bot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/text_dialog_handlers/welcome_bot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/WhisperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/command/WhisperCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/input/IOHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/input/IOHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/noses/mud/simple/session/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms/lounge.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms/lounge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/SampleSimpleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/SampleSimpleApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/CommandTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/CommandTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/GoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/GoCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/QuitCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/command/QuitCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/input/IOHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/input/IOHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/network/TelnetListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/network/TelnetListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/room/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/room/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/room/RoomLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/room/RoomLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/service/HelloWorldService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/service/HelloWorldService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/session/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/noses/mud/simple/session/Session.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rooms/lounge.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rooms/lounge.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mud-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SampleSimpleApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SampleSimpleApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SampleSimpleApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SampleSimpleApplicationTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.noses.mud.simple.SpringTestSampleSimpleApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/noses/mud/simple/SampleSimpleApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/noses/mud/simple/SampleSimpleApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/noses/mud/simple/SpringTestSampleSimpleApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/noses/mud/simple/SpringTestSampleSimpleApplicationTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +79,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="show.unlinked.gradle.project.popup" value="false" />
   </component>

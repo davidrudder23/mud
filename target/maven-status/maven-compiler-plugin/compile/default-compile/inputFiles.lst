@@ -1,6 +1,7 @@
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/GoCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/WhisperCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/network/TelnetListener.java
+/home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/PickUpCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/npc/DialogListener.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/npc/TextDialogNPCLoader.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/SampleSimpleApplication.java
@@ -14,6 +15,8 @@
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/npc/NPC.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/input/IOHandler.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/room/RoomLoader.java
+/home/drig/workspace/mud/src/main/java/org/noses/mud/simple/Item.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/LookCommand.java
+/home/drig/workspace/mud/src/main/java/org/noses/mud/simple/output/ColorCodes.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/command/SayCommand.java
 /home/drig/workspace/mud/src/main/java/org/noses/mud/simple/session/Session.java

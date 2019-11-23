@@ -43,6 +43,8 @@ public class IOHandler implements Runnable {
         log.info (message);
         out.println(message);
         out.flush();
+        out.print("\n> ");
+        out.flush();
     }
 
     public void quit() throws IOException {

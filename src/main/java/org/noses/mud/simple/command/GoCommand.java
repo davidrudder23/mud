@@ -9,7 +9,7 @@ import org.noses.mud.simple.session.Session;
 public class GoCommand extends Command {
 
     public GoCommand() {
-        name = "go";
+        names.add("go");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class GoCommand extends Command {
             ioHandler.sendMessage("Could not find room \""+line+"\"");
         } else {
             session.setRoom(exit);
-            ioHandler.sendMessage(exit.getDisplay("text/plain"));
+            ioHandler.sendMessage("\n\n"+exit.getDisplay("text/plain"));
         }
     }
 }
