@@ -5,6 +5,9 @@
   "description": "You face out from the lounge, looking over the valley.  You can see mist covered forests in the distance.  The hubbub of the lounge is a steady, low din behind you.",
   "exits": {
     "lounge": "main-lounge"
+  },
+  "npcs": {
+    "First Quest": "first-quest"
   }
 }
 

@@ -1,6 +1,6 @@
 package org.noses.mud.simple.npc;
 
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 public interface DialogListener {
 

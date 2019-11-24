@@ -2,7 +2,10 @@ package org.noses.mud.simple.npc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.noses.mud.simple.Item;
+import org.noses.mud.simple.npc.impl.FirstQuest;
 import org.noses.mud.simple.room.Room;
+import org.noses.mud.simple.user.Session;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -26,7 +29,9 @@ public class TextDialogNPCLoader {
         if (instance == null) {
             instance = new TextDialogNPCLoader();
             try {
+                instance.loadAllCodeNPCs();
                 instance.loadAllTextDialogNPCs();
+
             } catch (Exception exc) {
                 log.warn("Could not load text dialog NPCs", exc);
                 instance = null;
@@ -35,6 +40,11 @@ public class TextDialogNPCLoader {
         return instance;
     }
 
+    private void loadAllCodeNPCs() {
+        FirstQuest firstQuest = new FirstQuest();
+        npcs.put("first-quest", firstQuest);
+
+    }
     private void loadAllTextDialogNPCs() throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -47,7 +57,12 @@ public class TextDialogNPCLoader {
             TextDialogListener textDialogListener = objectMapper.readValue(resource.getInputStream(), TextDialogListener.class);
             log.info("Loaded class {}", textDialogListener.getIdentifier());
 
-            NPC npc = new NPC(textDialogListener);
+            NPC npc = new NPC(textDialogListener, new GiveHandler() {
+                @Override
+                public boolean handleGive(Session session, Item item) {
+                    return false;
+                }
+            });
             npc.setShortName(textDialogListener.getShortName());
             npc.setLongName(textDialogListener.getLongName());
             npc.setDescription(textDialogListener.getDescription());

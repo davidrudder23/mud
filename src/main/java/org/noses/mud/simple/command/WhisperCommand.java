@@ -3,7 +3,7 @@ package org.noses.mud.simple.command;
 import org.noses.mud.simple.input.IOHandler;
 import org.noses.mud.simple.npc.NPC;
 import org.noses.mud.simple.room.Room;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 public class WhisperCommand extends Command {
     public WhisperCommand() {
@@ -18,9 +18,9 @@ public class WhisperCommand extends Command {
         Room room = session.getRoom();
 
         for (Session othersSession: room.getSessionsInRoom()) {
-            if (line.startsWith(othersSession.getName()+" ")) {
-                othersSession.getIoHandler().sendMessage(session.getName() + " whispers \"" + line.trim() + "\" to you");
-                session.getIoHandler().sendMessage("You whispered \""+line+"\" to "+othersSession.getName());
+            if (line.startsWith(othersSession.getUser()+" ")) {
+                othersSession.getIoHandler().sendMessage(session.getUser() + " whispers \"" + line.trim() + "\" to you");
+                session.getIoHandler().sendMessage("You whispered \""+line+"\" to "+othersSession.getUser());
                 return;
             }
         }

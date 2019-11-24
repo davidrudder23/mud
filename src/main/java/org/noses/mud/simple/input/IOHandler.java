@@ -2,7 +2,7 @@ package org.noses.mud.simple.input;
 
 import lombok.extern.slf4j.Slf4j;
 import org.noses.mud.simple.command.CommandTable;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 import java.io.*;
 
@@ -35,7 +35,7 @@ public class IOHandler implements Runnable {
         if (speaker == null) {
             sendMessage(message);
         } else {
-            sendMessage(speaker.getName()+": "+message);
+            sendMessage(speaker.getUser()+": "+message);
         }
     }
 

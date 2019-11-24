@@ -3,7 +3,7 @@ package org.noses.mud.simple.command;
 import org.noses.mud.simple.input.IOHandler;
 import org.noses.mud.simple.npc.NPC;
 import org.noses.mud.simple.room.Room;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 public class SayCommand extends Command {
     public SayCommand() {
@@ -16,12 +16,16 @@ public class SayCommand extends Command {
 
         int countPeople = 0;
 
+        if (line.trim().toLowerCase().startsWith("to ")) {
+            line = line.trim().substring(3, line.length());
+        }
+
         for (Session othersSession: room.getSessionsInRoom()) {
             if (othersSession.equals(session)) {
                 continue;
             }
 
-            othersSession.getIoHandler().sendMessage(session.getName()+" says \""+line.trim()+"\"");
+            othersSession.getIoHandler().sendMessage(session.getUser()+" says \""+line.trim()+"\"");
             countPeople++;
         }
 

@@ -3,7 +3,7 @@ package org.noses.mud.simple.command;
 import lombok.extern.slf4j.Slf4j;
 import org.noses.mud.simple.input.IOHandler;
 import org.noses.mud.simple.room.Room;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 @Slf4j
 public class GoCommand extends Command {

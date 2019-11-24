@@ -1,7 +1,7 @@
 package org.noses.mud.simple.npc;
 
 import lombok.Data;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 import java.util.HashMap;
 import java.util.Map;

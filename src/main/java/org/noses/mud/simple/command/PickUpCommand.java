@@ -3,7 +3,7 @@ package org.noses.mud.simple.command;
 import org.noses.mud.simple.Item;
 import org.noses.mud.simple.input.IOHandler;
 import org.noses.mud.simple.room.Room;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 public class PickUpCommand extends Command {
     public PickUpCommand() {
@@ -15,12 +15,23 @@ public class PickUpCommand extends Command {
     public void handleCommandString(Session session, IOHandler ioHandler, String line) {
         Room room = session.getRoom();
 
-        for (Item item: room.getItems()) {
+        Item itemToBePickedUp = null;
+
+        for (Item item : room.getItems()) {
             String itemName = item.nameMatchesLine(line);
 
             if (itemName != null) {
-                ioHandler.sendMessage(session, "Pickup up "+itemName);
+                itemToBePickedUp = item;
+                break;
             }
+        }
+
+        if (itemToBePickedUp != null) {
+            ioHandler.sendMessage(session, "Picked up " + itemToBePickedUp.getName());
+            room.getItems().remove(itemToBePickedUp);
+            session.getUser().getInventory().add(itemToBePickedUp);
+        } else {
+            ioHandler.sendMessage("Could not pick up "+line);
         }
     }
 }

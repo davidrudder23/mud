@@ -1,7 +1,7 @@
 package org.noses.mud.simple.command;
 
 import org.noses.mud.simple.input.IOHandler;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 public class LookCommand extends Command {
 

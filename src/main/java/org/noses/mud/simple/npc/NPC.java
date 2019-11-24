@@ -2,15 +2,17 @@ package org.noses.mud.simple.npc;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.noses.mud.simple.Giveable;
+import org.noses.mud.simple.Item;
 import org.noses.mud.simple.room.Room;
-import org.noses.mud.simple.session.Session;
+import org.noses.mud.simple.user.Session;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
 @Data
-public class NPC {
+public class NPC implements Giveable {
 
     private String shortName;
     private String longName;
@@ -18,11 +20,19 @@ public class NPC {
 
     List<DialogListener> dialogListeners;
 
+    List<GiveHandler> giveHandlers;
+
     Room room;
 
-    public NPC(DialogListener dialogListener) {
+    public NPC() {
         this.dialogListeners = new ArrayList<DialogListener>();
+        giveHandlers = new ArrayList<>();
+    }
+
+    public NPC(DialogListener dialogListener, GiveHandler giveHandler) {
+        this();
         dialogListeners.add(dialogListener);
+        giveHandlers.add(giveHandler);
     }
 
     public NPC(List<DialogListener> dialogListeners) {
@@ -41,4 +51,13 @@ public class NPC {
         }
     }
 
+    @Override
+    public boolean give(Session session, Item item) {
+        for (GiveHandler giveHandler: giveHandlers) {
+            if (giveHandler.handleGive(session, item)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

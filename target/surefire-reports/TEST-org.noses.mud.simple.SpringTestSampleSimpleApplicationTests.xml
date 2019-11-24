@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.noses.mud.simple.SpringTestSampleSimpleApplicationTests" time="0.051" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="org.noses.mud.simple.SpringTestSampleSimpleApplicationTests" time="0.057" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.3+7-Ubuntu-1ubuntu218.10.1"/>
@@ -60,5 +60,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testContextLoads" classname="org.noses.mud.simple.SpringTestSampleSimpleApplicationTests" time="0.051"/>
+  <testcase name="testContextLoads" classname="org.noses.mud.simple.SpringTestSampleSimpleApplicationTests" time="0.057"/>
 </testsuite>

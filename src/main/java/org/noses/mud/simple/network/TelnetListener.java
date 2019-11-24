@@ -4,11 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.noses.mud.simple.input.IOHandler;
 import org.noses.mud.simple.room.Room;
 import org.noses.mud.simple.room.RoomLoader;
-import org.noses.mud.simple.session.Session;
-import org.noses.mud.simple.session.SessionRegistry;
+import org.noses.mud.simple.user.Session;
+import org.noses.mud.simple.user.SessionRegistry;
+import org.noses.mud.simple.user.User;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.UUID;
 
 /**
  * Eventually, I'd like to have multiple different ways to connect. "telnet hostname 2323" was the way we used to do it, back
@@ -40,7 +42,13 @@ public class TelnetListener implements Runnable {
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
-                Session session = new Session();
+
+                // TODO
+                User user = new User();
+                user.setName("User "+ UUID.randomUUID().toString());
+                user.setDescription("of the incomplete profile");
+
+                Session session = new Session(user);
                 Room room = RoomLoader.getInstance().getDefaultRoom();
                 session.setRoom(room);
                 SessionRegistry.getInstance().register(session);

@@ -7,11 +7,10 @@ import org.noses.mud.simple.Item;
 import org.noses.mud.simple.npc.NPC;
 import org.noses.mud.simple.npc.TextDialogNPCLoader;
 import org.noses.mud.simple.output.ColorCodes;
-import org.noses.mud.simple.session.Session;
-import org.noses.mud.simple.session.SessionRegistry;
+import org.noses.mud.simple.user.Session;
+import org.noses.mud.simple.user.SessionRegistry;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -59,7 +58,7 @@ public class Room {
             display.append(ColorCodes.color("light_grey"));
             for (Session session: getSessionsInRoom()) {
                 display.append("  ");
-                display.append(session.getName());
+                display.append(session.getUser());
                 display.append("\n");
             }
             display.append("\n");
